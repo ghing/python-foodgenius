@@ -1,14 +1,32 @@
+This is a simple client library for Food Genius' `REST API <http://getfoodgenius.com/api/>`_.
+
+Installation
+============
+
+pip install -e git+git://github.com/foodgenius/python-foodgenius.git
+
 Example
 =======
 
-import foodgenius
+::
 
-api = foodgenius.FoodGenius(authentication={'key': 'your_oauth_key',
-    'secret': 'your_oauth_secret'})
+    import foodgenius
+
+    # Create the API wrapper object using your OAuth credentials
+    api = foodgenius.FoodGenius(authentication={'key': 'your_oauth_key',
+        'secret': 'your_oauth_secret'})
 
 
-response_data = api.places.near('60622').get()
-response_data = api.tastes.interactions('justin@getfoodgenius.com').menus.get(max_rating=2.0, limit=3)
-response_data = api.places.near.il('chicago').get()
-response_data = api.places.near.il.chicago('logan%20square').get()
-api.tastes.profile.post({"identity": "geoff@terrorware.com"})
+    # GET /api/0.1/places/near/60622/
+    api.places.near('60622').get()
+
+    # GET /api/0.1/tastes/interactions/justin@getfoodgenius.com/?max_rating=2.0&limit=3
+    api.tastes.interactions('justin@getfoodgenius.com').menus.get(max_rating=2.0, limit=3)
+
+    # GET /api/0.1/places/near/il/chicago/
+    api.places.near.il('chicago').get()
+    # Different semantics for accessing the same resource
+    api.places.near('il')('chicago').get()
+
+    # POST /api/0.1/tastes/profile/
+    api.tastes.profile.post({"identity": "api@getfoodgenius.com"})
