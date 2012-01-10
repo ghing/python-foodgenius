@@ -3,8 +3,7 @@
 import slumber as ecooper_slumber
 import oauth2
 
-# TODO: Change this to production server
-API_DOMAIN = '50.57.144.113'
+API_DOMAIN = 'getfoodgenius.com'
 API_VERSION = '0.1'
 
 class OAuthResource(ecooper_slumber.Resource):
@@ -23,9 +22,9 @@ class OAuthResource(ecooper_slumber.Resource):
 
         return super(OAuthResource, self).request(method, **kwargs)
 
-def Api(authentication):
-    return ecooper_slumber.Api(domain=API_DOMAIN, 
+def Api(authentication, domain=API_DOMAIN, version=API_VERSION):
+    return ecooper_slumber.Api(domain=domain, 
         resource_class=OAuthResource,
         authentication=authentication, 
-        uri='/api/' + API_VERSION + '/',
+        uri='/api/' + version + '/',
         http=oauth2.Client)
