@@ -1,1 +1,1 @@
-from slumber.exceptions import *
+from nap.exceptions import *
