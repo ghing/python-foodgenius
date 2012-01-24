@@ -10,5 +10,5 @@ setup(
     long_description=open(os.path.join(base_dir, "README.rst"), "r").read(),
     url="http://getfoodgenius.com/api/",
     packages=find_packages(),
-    install_requires=['slumber', 'oauth2']
+    install_requires=['nap', 'oauth2']
 )
