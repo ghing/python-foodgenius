@@ -7,16 +7,18 @@ Dependencies
 * ecooper_'s fork_ of slumber_ (see `Installation`_)
 
 .. _ecooper: http://github.com/ecooper/
-.. _fork: http://github.com/ecooper/slumber/
+.. _fork: http://github.com/ecooper/nap/
 .. _slumber: http://slumber.in/
 
 Installation
 ============
 
-# Need to install ecooper's fork of slumber first, otherwise
+# Need to install ecooper's fork of slumber, nap_,first, otherwise
 # pip will use the one found in PyPI
-pip install -e git+git://github.com/ecooper/slumber.git
+pip install -e git+git://github.com/ecooper/nap.git
 pip install -e git+git://github.com/foodgenius/python-foodgenius.git
+
+.. _nap: http://github.com/ecooper/nap/
 
 Example
 =======
