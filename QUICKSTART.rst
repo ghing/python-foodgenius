@@ -91,3 +91,4 @@ And the API can then offer personalized suggestions::
                                    u'name': u"Laguardia's Cuban Bistro"}},
      u'name': u'Jibarito Steak Sandwich',
      u'price': 7.9}
+
