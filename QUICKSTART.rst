@@ -53,20 +53,20 @@ Getting suggestions
 """""""""""""""""""
 
 Menu items are suggested on a per-user basis, so you'll first need to create
-a profile for your app's users::
+a profile for your app's users
 
 .. code-block:: python
 
     >>> user_id = '12345'
     >>> api.tastes.profile.post({'identity': user_id})
 
-A user's taste profile gets seeded by rating menu items::
+A user's taste profile gets seeded by rating menu items
 
 .. code-block:: python
 
     >>> api.tastes.interactions(user_id).menus.post({'id': menu_item['id'], 'rating': 7.5, 'range': 10.0})
 
-And the API can then offer personalized suggestions::
+And the API can then offer personalized suggestions
 
 .. code-block:: python
 
