@@ -8,16 +8,16 @@ The foodgenius API client library can be installed from GitHub using pip
 
 .. code-block:: bash
 
-$ pip install git+git://github.com/ecooper/nap.git
-$ pip install git+git://github.com/foodgenius/python-foodgenius.git
+    $ pip install git+git://github.com/ecooper/nap.git
+    $ pip install git+git://github.com/foodgenius/python-foodgenius.git
 
 Once the library is installed, you can instantiate an API resource object
 that will let you connect to and interact with the API.
 
 .. code-block:: python
 
->>> from foodgenius import Api
->>> api = Api(authentication={'key': 'YOUR_API_OAUTH_KEY', 'secret': 'YOU_API_OAUTH_SECRET'})
+    >>> from foodgenius import Api
+    >>> api = Api(authentication={'key': 'YOUR_API_OAUTH_KEY', 'secret': 'YOU_API_OAUTH_SECRET'})
 
 Find places and menus
 """""""""""""""""""""
